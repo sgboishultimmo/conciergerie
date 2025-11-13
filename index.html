@@ -1,0 +1,1000 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Nom de votre conciergerie - Conciergerie location saisonnière Val de Loire & Atlantique</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Conciergerie spécialisée dans la gestion de locations saisonnières et de résidences secondaires en Val de Loire et région nantaise. Gestion clé en main pour propriétaires : annonces, voyageurs, ménage, linge, optimisation des revenus.">
+  <style>
+    :root {
+      --bg: #f5f5f7;
+      --bg-alt: #ffffff;
+      --primary: #1f4f7b;
+      --primary-soft: #e1ebf7;
+      --accent: #d89b3c;
+      --text: #222222;
+      --muted: #666666;
+      --radius-lg: 18px;
+      --shadow-soft: 0 18px 40px rgba(15, 23, 42, 0.16);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top left, #e9f0fb 0, #f7f7fa 45%, #f5f5f7 100%);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .page {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 24px 16px 64px;
+    }
+
+    /* HEADER */
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 12px 18px;
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 999px;
+      box-shadow: 0 12px 35px rgba(15, 23, 42, 0.10);
+      position: sticky;
+      top: 12px;
+      backdrop-filter: blur(12px);
+      z-index: 10;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .brand-mark {
+      width: 32px;
+      height: 32px;
+      border-radius: 12px;
+      background: radial-gradient(circle at 20% 20%, #ffffff 0, #dbe7ff 35%, #1f4f7b 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      color: #ffffff;
+      font-size: 16px;
+    }
+
+    .brand-text-title {
+      font-weight: 700;
+      font-size: 16px;
+    }
+
+    .brand-text-sub {
+      font-size: 11px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    nav {
+      display: flex;
+      gap: 16px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    nav a:hover { color: var(--primary); }
+
+    .btn {
+      border-radius: 999px;
+      padding: 8px 16px;
+      font-size: 13px;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #1f4f7b, #163756);
+      color: #ffffff;
+      box-shadow: 0 12px 30px rgba(15, 23, 42, 0.35);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.45);
+    }
+
+    .btn-ghost {
+      background: transparent;
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      color: var(--text);
+    }
+
+    .btn-ghost:hover {
+      background: rgba(255, 255, 255, 0.8);
+    }
+
+    main { margin-top: 32px; }
+
+    /* HERO */
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.5fr) minmax(0, 1.2fr);
+      gap: 32px;
+      align-items: center;
+      margin-bottom: 40px;
+    }
+
+    .hero-kicker {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+
+    .hero h1 {
+      font-size: clamp(28px, 4vw, 36px);
+      line-height: 1.18;
+      margin-bottom: 12px;
+    }
+
+    .hero h1 span { color: var(--primary); }
+
+    .hero-sub {
+      color: var(--muted);
+      font-size: 15px;
+      margin-bottom: 16px;
+    }
+
+    .hero-highlight {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(232, 241, 255, 0.9);
+      border-radius: 999px;
+      padding: 6px 12px;
+      font-size: 12px;
+      color: #1e3a8a;
+      margin-bottom: 14px;
+    }
+
+    .hero-cta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .hero-note {
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    .hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 14px;
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    .badge {
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 999px;
+      padding: 4px 9px;
+      border: 1px solid rgba(148, 163, 184, 0.5);
+    }
+
+    .hero-card {
+      background: linear-gradient(145deg, #0f172a, #1f2937);
+      color: #e5e7eb;
+      border-radius: var(--radius-lg);
+      padding: 20px 18px;
+      box-shadow: var(--shadow-soft);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-card::before {
+      content: "";
+      position: absolute;
+      inset: -40%;
+      background: radial-gradient(circle at top, rgba(248, 250, 252, 0.12), transparent 60%);
+      opacity: 0.9;
+    }
+
+    .hero-card-inner { position: relative; z-index: 1; }
+
+    .hero-card-title {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: #9ca3af;
+      margin-bottom: 8px;
+    }
+
+    .hero-card-main {
+      font-size: 17px;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .hero-card-sub {
+      font-size: 12px;
+      color: #9ca3af;
+      margin-bottom: 12px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 6px;
+    }
+
+    .stat-card {
+      background: rgba(15, 23, 42, 0.75);
+      border-radius: 12px;
+      padding: 8px 9px;
+      border: 1px solid rgba(148, 163, 184, 0.4);
+    }
+
+    .stat-label {
+      font-size: 11px;
+      color: #9ca3af;
+      margin-bottom: 3px;
+    }
+
+    .stat-value {
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .stat-picto {
+      font-size: 10px;
+      color: #9ca3af;
+      margin-top: 3px;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      border-radius: 999px;
+      padding: 4px 8px;
+      font-size: 11px;
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      margin-top: 8px;
+    }
+
+    /* SECTIONS GÉNÉRIQUES */
+
+    .section { margin-bottom: 40px; }
+
+    .section-header { margin-bottom: 18px; }
+
+    .section-kicker {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--muted);
+      margin-bottom: 4px;
+    }
+
+    .section-title {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .section-sub {
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    /* CARDS GÉNÉRALES */
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+    }
+
+    .card {
+      background: var(--bg-alt);
+      border-radius: var(--radius-lg);
+      padding: 16px 14px;
+      box-shadow: 0 10px 25px rgba(15, 23, 42, 0.10);
+      border: 1px solid rgba(148, 163, 184, 0.3);
+    }
+
+    .card-icon {
+      width: 28px;
+      height: 28px;
+      border-radius: 999px;
+      background: var(--primary-soft);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      margin-bottom: 8px;
+    }
+
+    .card-title {
+      font-size: 15px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .card-text {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    /* ZONES */
+
+    .zones {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 14px;
+    }
+
+    .zone-card {
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: var(--radius-lg);
+      padding: 14px 12px;
+      border: 1px dashed rgba(148, 163, 184, 0.6);
+      font-size: 13px;
+    }
+
+    .zone-title {
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .zone-list {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    /* ÉTAPES */
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      counter-reset: step;
+    }
+
+    .step {
+      position: relative;
+      background: #ffffff;
+      border-radius: var(--radius-lg);
+      padding: 16px 14px 14px 38px;
+      box-shadow: 0 10px 22px rgba(15, 23, 42, 0.10);
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      font-size: 13px;
+    }
+
+    .step::before {
+      counter-increment: step;
+      content: counter(step);
+      position: absolute;
+      left: 12px;
+      top: 14px;
+      width: 18px;
+      height: 18px;
+      border-radius: 999px;
+      background: var(--primary-soft);
+      color: var(--primary);
+      font-size: 11px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .step-title {
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .step-text {
+      color: var(--muted);
+    }
+
+    /* TEMOIGNAGE & POSITIONNEMENT */
+
+    .testimonial {
+      display: grid;
+      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+      gap: 18px;
+      align-items: center;
+    }
+
+    .quote-block {
+      background: #0f172a;
+      color: #e5e7eb;
+      border-radius: var(--radius-lg);
+      padding: 18px 16px;
+      box-shadow: var(--shadow-soft);
+      font-size: 13px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .quote-block::before {
+      content: "“";
+      position: absolute;
+      font-size: 70px;
+      color: rgba(148, 163, 184, 0.15);
+      top: -28px;
+      left: 12px;
+    }
+
+    .quote-text { margin-bottom: 8px; }
+
+    .quote-author {
+      font-weight: 600;
+      font-size: 13px;
+    }
+
+    .quote-meta {
+      font-size: 11px;
+      color: #9ca3af;
+    }
+
+    /* PRICING */
+
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 18px;
+    }
+
+    .pricing-card {
+      background: #ffffff;
+      border-radius: var(--radius-lg);
+      padding: 18px 16px;
+      box-shadow: 0 14px 28px rgba(15, 23, 42, 0.12);
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      font-size: 13px;
+    }
+
+    .pricing-title {
+      font-weight: 600;
+      font-size: 15px;
+      margin-bottom: 4px;
+    }
+
+    .pricing-tagline {
+      font-size: 12px;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+
+    .pricing-main {
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 6px;
+    }
+
+    .pricing-main span {
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--muted);
+    }
+
+    .pricing-list {
+      margin-top: 10px;
+      padding-left: 16px;
+      color: var(--muted);
+    }
+
+    .pricing-list li {
+      margin-bottom: 4px;
+    }
+
+    /* FAQ */
+
+    .faq {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 12px;
+      font-size: 13px;
+    }
+
+    .faq-item {
+      background: #ffffff;
+      border-radius: var(--radius-lg);
+      padding: 12px 11px;
+      border: 1px solid rgba(148, 163, 184, 0.5);
+    }
+
+    .faq-q {
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .faq-a {
+      color: var(--muted);
+    }
+
+    /* CONTACT */
+
+    .contact-block {
+      background: linear-gradient(135deg, #1f4f7b, #0f172a);
+      color: #e5e7eb;
+      border-radius: 22px;
+      padding: 20px 18px;
+      display: grid;
+      grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+      gap: 18px;
+      align-items: center;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .contact-title {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .contact-text {
+      font-size: 13px;
+      color: #cbd5f5;
+      margin-bottom: 10px;
+    }
+
+    .contact-form {
+      display: grid;
+      gap: 8px;
+      font-size: 12px;
+    }
+
+    .field {
+      display: grid;
+      gap: 4px;
+    }
+
+    label {
+      font-size: 11px;
+      color: #cbd5f5;
+    }
+
+    input, textarea {
+      border-radius: 999px;
+      border: none;
+      padding: 7px 10px;
+      font-size: 12px;
+      font-family: inherit;
+      outline: none;
+    }
+
+    textarea {
+      border-radius: 14px;
+      resize: vertical;
+      min-height: 70px;
+    }
+
+    .contact-hint {
+      font-size: 11px;
+      color: #a5b4fc;
+      margin-top: 6px;
+    }
+
+    footer {
+      margin-top: 24px;
+      font-size: 11px;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    @media (max-width: 800px) {
+      header { border-radius: 16px; }
+      nav { display: none; }
+      .hero { grid-template-columns: minmax(0, 1fr); }
+      .hero-card { order: -1; }
+      .testimonial { grid-template-columns: minmax(0, 1fr); }
+      .contact-block { grid-template-columns: minmax(0, 1fr); }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <div class="brand">
+        <div class="brand-mark">C</div>
+        <div>
+          <!-- 🔁 REMPLACE "Nom de votre conciergerie" PARTOUT DANS LA PAGE -->
+          <div class="brand-text-title">Nom de votre conciergerie</div>
+          <div class="brand-text-sub">Val de Loire & Atlantique</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#services">Services</a>
+        <a href="#zones">Zones</a>
+        <a href="#tarifs">Tarifs</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <button class="btn btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+        Demander un appel
+      </button>
+    </header>
+
+    <main>
+      <!-- HERO -->
+      <section class="hero">
+        <div>
+          <div class="hero-kicker">Conciergerie location saisonnière</div>
+          <h1>
+            Une conciergerie <span>pensée par un propriétaire</span><br>
+            pour vos locations en Val de Loire & Atlantique.
+          </h1>
+          <p class="hero-sub">
+            <strong>Nom de votre conciergerie</strong> accompagne les propriétaires de gîtes, maisons 
+            et appartements en <strong>location saisonnière</strong> ou <strong>LMNP</strong> : 
+            annonces, voyageurs, ménage, linge, optimisation des revenus 
+            à Nantes, sur la côte Atlantique et en Val de Loire.
+          </p>
+
+          <div class="hero-highlight">
+            ✓ Conciergerie spécialisée Val de Loire & région nantaise – gestion clé en main
+          </div>
+
+          <div class="hero-cta">
+            <button class="btn btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+              Estimer le potentiel de mon bien
+            </button>
+            <button class="btn btn-ghost" onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'})">
+              Voir ce que vous gérez
+            </button>
+          </div>
+
+          <p class="hero-note">
+            Réponse sous 24–48h. Aucun engagement après cet échange.
+          </p>
+
+          <div class="hero-badges">
+            <span class="badge">Propriétaires LMNP, résidences secondaires, gîtes</span>
+            <span class="badge">Connaissance terrain : Val de Loire & Nantes</span>
+            <span class="badge">Process digitalisés, contact humain</span>
+          </div>
+        </div>
+
+        <aside class="hero-card">
+          <div class="hero-card-inner">
+            <div class="hero-card-title">Exemple de projection</div>
+            <div class="hero-card-main">Une maison gérée, du temps libéré.</div>
+            <div class="hero-card-sub">
+              Illustration pour une maison 3–4 chambres en location saisonnière bien positionnée.
+            </div>
+
+            <div class="hero-grid">
+              <div class="stat-card">
+                <div class="stat-label">Revenus locatifs annuels possibles</div>
+                <div class="stat-value">18 000 – 28 000 €</div>
+                <div class="stat-picto">Selon localisation, saisonnalité et stratégie choisie.</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-label">Charge mentale pour vous</div>
+                <div class="stat-value">&lt; 1 h / mois</div>
+                <div class="stat-picto">Nous gérons voyageurs, ménage, planning et suivi.</div>
+              </div>
+            </div>
+
+            <div class="pill">
+              <span>★</span>
+              <span>Conciergerie pensée pour des propriétaires exigeants, pas pour du volume anonyme.</span>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <!-- SERVICES -->
+      <section id="services" class="section">
+        <div class="section-header">
+          <div class="section-kicker">Services</div>
+          <h2 class="section-title">Nous gérons votre location saisonnière de A à Z</h2>
+          <p class="section-sub">
+            L’objectif : vous permettre de louer votre bien en courte durée sans vous occuper 
+            du quotidien, tout en gardant une vision claire des résultats et la maîtrise 
+            de vos décisions.
+          </p>
+        </div>
+
+        <div class="features">
+          <div class="card">
+            <div class="card-icon">🛎️</div>
+            <div class="card-title">Annonce & voyageurs</div>
+            <p class="card-text">
+              Création et optimisation des annonces (photos, textes, calendrier), gestion 
+              des demandes sur les plateformes (Airbnb, Booking, autres), filtrage des profils, 
+              réponses rapides et messages automatisés personnalisés.
+            </p>
+          </div>
+          <div class="card">
+            <div class="card-icon">🧼</div>
+            <div class="card-title">Ménage, linge & rotation</div>
+            <p class="card-text">
+              Coordination du ménage avec des prestataires fiables, gestion du linge, contrôle 
+              de l’état du bien, reporting en cas d’anomalie. Vos voyageurs arrivent dans un 
+              logement prêt comme une chambre d’hôtel.
+            </p>
+          </div>
+          <div class="card">
+            <div class="card-icon">📊</div>
+            <div class="card-title">Tarifs & optimisation</div>
+            <p class="card-text">
+              Mise en place d’une stratégie tarifaire (saison, événements, week-end, longs séjours), 
+              suivi des performances d’occupation et d’ADR, ajustements réguliers en fonction de vos 
+              objectifs (revenu / tranquillité / durée des séjours).
+            </p>
+          </div>
+          <div class="card">
+            <div class="card-icon">🤝</div>
+            <div class="card-title">Conseil propriétaire</div>
+            <p class="card-text">
+              Retour d’expérience sur l’aménagement, les équipements qui font la différence, la 
+              fiscalité (LMNP, résidence secondaire, SCI à l’IS) et l’impact de chaque décision sur 
+              la rentabilité globale de votre projet.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ZONES -->
+      <section id="zones" class="section">
+        <div class="section-header">
+          <div class="section-kicker">Zones d’intervention</div>
+          <h2 class="section-title">Entre châteaux de la Loire et côte Atlantique</h2>
+          <p class="section-sub">
+            Nous intervenons sur des territoires que nous connaissons en tant que professionnels 
+            de la location saisonnière, mais aussi comme habitants.
+          </p>
+        </div>
+
+        <div class="zones">
+          <div class="zone-card">
+            <div class="zone-title">Val de Loire</div>
+            <div class="zone-list">
+              Civray-de-Touraine, Chenonceaux, Bléré, Amboise, Francueil, La Croix-en-Touraine 
+              et villages alentours à forte attractivité touristique (châteaux, Loire à vélo…).
+            </div>
+          </div>
+          <div class="zone-card">
+            <div class="zone-title">Région nantaise</div>
+            <div class="zone-list">
+              Nantes et sa métropole, notamment Sud Loire, bords de Loire, quartiers résidentiels 
+              adaptés à la location courte ou moyenne durée pour tourisme et professionnel.
+            </div>
+          </div>
+          <div class="zone-card">
+            <div class="zone-title">Côte Atlantique (sur étude)</div>
+            <div class="zone-list">
+              Possibilité d’accompagnement sur certains projets (Pornic, La Baule, etc.) 
+              en fonction du bien, du calendrier et du niveau de service attendu.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TARIFS -->
+      <section id="tarifs" class="section">
+        <div class="section-header">
+          <div class="section-kicker">Tarifs</div>
+          <h2 class="section-title">Un modèle simple, aligné sur vos revenus</h2>
+          <p class="section-sub">
+            Nous travaillons principalement à la <strong>commission sur les loyers encaissés</strong> 
+            : si votre bien ne loue pas, nous ne gagnons pas d’argent. Les frais de ménage et de linge 
+            sont traités séparément pour rester transparents.
+          </p>
+        </div>
+
+        <div class="pricing-grid">
+          <div class="pricing-card">
+            <div class="pricing-title">Gestion complète</div>
+            <div class="pricing-tagline">Pour les propriétaires qui souhaitent tout déléguer.</div>
+            <div class="pricing-main">
+              ~20 % <span>des revenus locatifs</span>
+            </div>
+            <ul class="pricing-list">
+              <li>Gestion des annonces et du calendrier.</li>
+              <li>Relation voyageurs avant, pendant et après le séjour.</li>
+              <li>Coordination ménage & linge.</li>
+              <li>Suivi et optimisation des tarifs.</li>
+              <li>Tableau de bord synthétique sur les performances.</li>
+            </ul>
+          </div>
+
+          <div class="pricing-card">
+            <div class="pricing-title">Sur-mesure</div>
+            <div class="pricing-tagline">Adapté si vous gardez une partie de la gestion.</div>
+            <div class="pricing-main">
+              À partir de 12–15 % <span>selon périmètre</span>
+            </div>
+            <ul class="pricing-list">
+              <li>Possible si vous gérez certaines tâches (ménage, check-in, etc.).</li>
+              <li>Idéal pour un basculement progressif vers une gestion déléguée.</li>
+              <li>Tarif ajusté après étude de votre bien et de votre organisation actuelle.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- POUR QUI / TEMOIGNAGE -->
+      <section class="section">
+        <div class="testimonial">
+          <div>
+            <div class="section-header">
+              <div class="section-kicker">Pour qui ?</div>
+              <h2 class="section-title">Propriétaires investisseurs et familles attachées à leur bien</h2>
+              <p class="section-sub">
+                Notre conciergerie s’adresse aux propriétaires qui veulent un vrai partenaire : 
+                quelqu’un qui comprend à la fois la rentabilité et la dimension affective 
+                d’une maison ou d’un gîte.
+              </p>
+            </div>
+            <ul style="font-size:13px; color:var(--muted); padding-left:16px;">
+              <li>Propriétaires de gîtes ou maisons de famille en Val de Loire.</li>
+              <li>Investisseurs LMNP à Nantes et sur la côte Atlantique.</li>
+              <li>Propriétaires qui vivent loin de leur bien ou manquent de temps.</li>
+            </ul>
+          </div>
+
+          <div class="quote-block">
+            <p class="quote-text">
+              « Nous avons construit cette conciergerie après avoir nous-mêmes exploité des 
+              gîtes en location saisonnière : nous savons ce que l’on attend en tant que 
+              propriétaire et ce qu’un voyageur exige pour revenir. »
+            </p>
+            <div class="quote-author">Nom du gérant</div>
+            <div class="quote-meta">Fondateur – Nom de votre conciergerie</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FONCTIONNEMENT -->
+      <section id="fonctionnement" class="section">
+        <div class="section-header">
+          <div class="section-kicker">Fonctionnement</div>
+          <h2 class="section-title">Comment se passe une collaboration concrètement ?</h2>
+        </div>
+
+        <div class="steps">
+          <div class="step">
+            <div class="step-title">1. Premier échange & estimation</div>
+            <div class="step-text">
+              Vous nous présentez votre bien (ou projet). Nous analysons rapidement le potentiel, 
+              la zone, les contraintes et vos objectifs de revenus ou de fréquence d’occupation.
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-title">2. Proposition claire</div>
+            <div class="step-text">
+              Vous recevez une proposition de gestion détaillée : périmètre, estimation de revenus, 
+              niveau de commission, organisation ménages, modalités de départ.
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-title">3. Mise en ligne & suivi</div>
+            <div class="step-text">
+              Nous créons ou reprenons vos annonces, mettons en place nos outils (planning, 
+              automatisations, process ménage) et vous gardez un accès clair à vos performances.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section id="faq" class="section">
+        <div class="section-header">
+          <div class="section-kicker">Questions fréquentes</div>
+          <h2 class="section-title">Ce que les propriétaires veulent savoir</h2>
+        </div>
+
+        <div class="faq">
+          <div class="faq-item">
+            <div class="faq-q">Est-ce que je reste propriétaire et bailleur ?</div>
+            <div class="faq-a">
+              Oui. Vous restez pleinement propriétaire du bien et bailleur pour les locations. 
+              Nous intervenons comme conciergerie / mandataire pour la gestion opérationnelle.
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q">Les frais de ménage sont-ils compris dans la commission ?</div>
+            <div class="faq-a">
+              Non, les frais de ménage et de linge sont distincts pour rester transparents. 
+              Ils sont généralement supportés par les voyageurs via des frais de ménage ou 
+              intégrés dans le modèle défini ensemble.
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q">Puis-je utiliser mon logement pour moi-même ?</div>
+            <div class="faq-a">
+              Bien sûr. Vous gardez la main sur les périodes bloquées pour votre usage 
+              personnel. Nous planifions la location en fonction des dates que vous ouvrez.
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q">Intervenez-vous aussi en cas de problème (casse, voisinage) ?</div>
+            <div class="faq-a">
+              Nous gérons le premier niveau : échange avec les voyageurs, organisation 
+              d’une intervention si besoin et remontée d’information. La couverture 
+              assurantielle reste celle que vous avez choisie pour le bien.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" class="section">
+        <div class="contact-block">
+          <div>
+            <div class="contact-title">Parlons de votre bien ou de votre projet</div>
+            <div class="contact-text">
+              Envoyez-nous quelques informations et nous revenons vers vous avec un 
+              premier avis, puis, si vous le souhaitez, un échange téléphonique ou visio 
+              plus détaillé.
+            </div>
+            <ul style="font-size:12px; color:#cbd5f5; padding-left:16px;">
+              <li>Réponse sous 24 à 48h.</li>
+              <li>Pas d’engagement après ce premier retour.</li>
+              <li>Accompagnement possible dès la phase de recherche ou de travaux.</li>
+            </ul>
+          </div>
+
+          <form class="contact-form">
+            <div class="field">
+              <label for="nom">Nom & prénom</label>
+              <input id="nom" type="text" placeholder="Votre nom" />
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" type="email" placeholder="vous@exemple.com" />
+            </div>
+            <div class="field">
+              <label for="zone">Localisation du bien</label>
+              <input id="zone" type="text" placeholder="Ex. : Chenonceaux, Nantes, côte Atlantique…" />
+            </div>
+            <div class="field">
+              <label for="message">Votre projet en quelques lignes</label>
+              <textarea id="message" placeholder="Type de bien, nombre de chambres, situation actuelle (déjà en location, projet, travaux…)"></textarea>
+            </div>
+            <button type="button" class="btn btn-primary">
+              Envoyer ma demande
+            </button>
+            <div class="contact-hint">
+              À connecter ensuite à Jotform / Zapier / votre CRM pour automatiser la prise de contact.
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      Nom de votre conciergerie – Val de Loire & Atlantique • © 
+      <span id="year"></span> • Conciergerie location saisonnière & résidences secondaires
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
