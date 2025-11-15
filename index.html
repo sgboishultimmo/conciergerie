@@ -3,411 +3,410 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Simpleo Conciergerie – Val de Loire & Atlantique</title>
-  <meta name="description" content="Simpleo Conciergerie accompagne les propriétaires de locations saisonnières et meublés en Val de Loire, région nantaise et côte Atlantique. Gestion simple, fiable et rentable.">
+  <title>Simpleo Conciergerie – Conciergerie Val de Loire & Atlantique</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
   <style>
     :root {
-      --bg: #f7f5f0;
-      --bg-alt: #f9f7f2;
-      --accent: #0d6efd;
-      --accent-soft: #e3edff;
-      --text: #262626;
+      --bg: #fdf7f0;
+      --card: #ffffff;
+      --accent-pink: #ff4f7b;
+      --accent-blue: #1d86ff;
+      --text: #1f2933;
       --muted: #6b7280;
-      --card-bg: #ffffff;
-      --border-soft: #e5e7eb;
-      --radius-lg: 18px;
-      --shadow-soft: 0 14px 40px rgba(15, 23, 42, 0.12);
+      --radius-lg: 20px;
+      --shadow-soft: 0 18px 45px rgba(15, 23, 42, 0.15);
+      --border-soft: #f1e7dd;
     }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
     body {
       font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: linear-gradient(180deg, #fdfcf9 0%, #f7f5f0 100%);
+      background: var(--bg);
       color: var(--text);
       line-height: 1.6;
     }
-    a { color: inherit; text-decoration: none; }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
     .page {
       max-width: 1120px;
       margin: 0 auto;
-      padding: 20px 16px 60px;
+      padding: 0 16px 60px;
     }
-    .topbar {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-      padding: 10px 18px;
-      margin-bottom: 16px;
-      border-radius: 999px;
-      background: rgba(255,255,255,0.9);
-      border: 1px solid rgba(148,163,184,0.35);
-      box-shadow: 0 10px 30px rgba(15,23,42,0.12);
-      position: sticky;
-      top: 12px;
-      z-index: 20;
-      backdrop-filter: blur(10px);
-    }
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-    .brand-mark {
-      width: 30px;
-      height: 30px;
-      border-radius: 12px;
-      background: radial-gradient(circle at 20% 20%, #ffffff 0, #f5e9d7 40%, #cfa874 100%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 700;
-      color: #3b2a16;
-      font-size: 16px;
-    }
-    .brand-text-title {
-      font-weight: 600;
-      font-size: 15px;
-    }
-    .brand-text-sub {
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      color: var(--muted);
-    }
-    nav {
-      display: flex;
-      gap: 16px;
-      font-size: 13px;
-      color: var(--muted);
-    }
-    nav a:hover { color: var(--accent); }
-    .cta-top {
-      display: flex;
-      gap: 8px;
-      align-items: center;
-    }
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 9px 16px;
-      border-radius: 999px;
-      border: none;
-      font-size: 13px;
-      font-weight: 600;
-      cursor: pointer;
-      transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
-    }
-    .btn-primary {
-      background: linear-gradient(135deg, #0d6efd 0%, #4fa3ff 100%);
-      color: #ffffff;
-      box-shadow: 0 8px 20px rgba(37, 99, 235, 0.35);
-    }
-    .btn-primary:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 12px 28px rgba(37, 99, 235, 0.45);
-    }
-    .btn-ghost {
-      background: transparent;
-      border: 1px solid rgba(148, 163, 184, 0.6);
-      color: var(--text);
-    }
-    .btn-ghost:hover { background: rgba(255,255,255,0.9); }
+
+    /* HERO */
+
     header.hero {
-      margin-top: 26px;
-      background: linear-gradient(135deg, #faf7f2 0%, #f3ede5 100%);
-      border-radius: 26px;
-      padding: 26px 22px;
-      display: grid;
-      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1.3fr);
-      gap: 22px;
-      border: 1px solid rgba(229,231,235,0.9);
-      box-shadow: var(--shadow-soft);
-      overflow: hidden;
-    }
-    .hero-copy h1 {
-      font-size: clamp(26px, 4vw, 34px);
-      line-height: 1.15;
-      margin-bottom: 10px;
-    }
-    .hero-copy h1 span { color: #b8833a; }
-    .hero-kicker {
-      font-size: 12px;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      color: var(--muted);
-      margin-bottom: 4px;
-    }
-    .hero-sub {
-      font-size: 14px;
-      color: var(--muted);
-      margin-bottom: 16px;
-      max-width: 520px;
-    }
-    .hero-badges {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-bottom: 12px;
-      font-size: 11px;
-    }
-    .badge {
-      padding: 4px 10px;
-      border-radius: 999px;
-      border: 1px solid rgba(148,163,184,0.55);
-      background: rgba(255,255,255,0.85);
-    }
-    .hero-cta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      align-items: center;
-      margin-bottom: 8px;
-    }
-    .hero-note {
-      font-size: 11px;
-      color: var(--muted);
-    }
-    .hero-image {
       position: relative;
-      border-radius: 22px;
+      height: 340px;
+      border-radius: 0 0 36px 36px;
       overflow: hidden;
-      min-height: 220px;
-      background-image: url("assets/hero-conciergerie.jpg");
+      box-shadow: var(--shadow-soft);
+      margin-bottom: 40px;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url("assets/hero-salon.jpg");
       background-size: cover;
       background-position: center;
-      background-repeat: no-repeat;
+      filter: brightness(0.85);
+      transform: scale(1.02);
     }
-    .hero-image::after {
-      content: "Val de Loire • Nantes • Atlantique";
+
+    .hero-overlay {
       position: absolute;
-      left: 14px;
-      bottom: 14px;
-      padding: 6px 10px;
-      border-radius: 999px;
-      background: rgba(15,23,42,0.75);
-      color: #e5e7eb;
-      font-size: 11px;
+      inset: 0;
+      background: linear-gradient(
+        180deg,
+        rgba(0,0,0,0.15) 0%,
+        rgba(0,0,0,0.35) 80%
+      );
     }
-    .hero-stats {
-      position: absolute;
-      top: 14px;
-      right: 14px;
-      display: grid;
-      gap: 6px;
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #ffffff;
+      padding: 40px 16px 30px;
     }
-    .hero-stat-card {
-      background: rgba(255,255,255,0.92);
-      border-radius: 14px;
-      padding: 6px 8px;
-      font-size: 11px;
-      box-shadow: 0 10px 25px rgba(15,23,42,0.18);
-      border: 1px solid rgba(229,231,235,0.9);
+
+    .hero-logo {
+      font-size: clamp(40px, 5vw, 52px);
+      font-weight: 700;
+      letter-spacing: 0.06em;
     }
-    .hero-stat-value {
-      font-weight: 600;
-      font-size: 13px;
+
+    .hero-sub {
+      margin-top: 6px;
+      font-size: 15px;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      opacity: 0.9;
     }
-    main { margin-top: 34px; }
-    .section {
-      padding: 46px 4px;
-      max-width: 980px;
-      margin: 0 auto;
-    }
-    .section h2 {
-      font-size: 22px;
-      text-align: left;
-      margin-bottom: 6px;
-    }
-    .section-sub {
-      font-size: 13px;
-      color: var(--muted);
-      margin-bottom: 18px;
-      max-width: 640px;
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(230px,1fr));
-      gap: 18px;
-    }
-    .card {
-      background: var(--card-bg);
-      border-radius: var(--radius-lg);
-      padding: 18px 16px;
-      border: 1px solid rgba(229,231,235,0.9);
-      box-shadow: 0 6px 18px rgba(15,23,42,0.06);
-      font-size: 13px;
-    }
-    .card h3 { font-size: 15px; margin-bottom: 4px; }
-    .muted { color: var(--muted); }
-    .pill {
+
+    .hero-cta {
+      margin-top: 22px;
       display: inline-flex;
       align-items: center;
-      gap: 6px;
-      padding: 4px 9px;
+      justify-content: center;
+      padding: 10px 22px;
       border-radius: 999px;
-      background: var(--accent-soft);
-      color: #1e3a8a;
-      font-size: 11px;
-      margin-bottom: 10px;
-    }
-    .how {
-      background: #f7f9fc;
-      border-radius: 24px;
-      border: 1px solid var(--border-soft);
-      box-shadow: 0 10px 28px rgba(15,23,42,0.08);
-      padding: 26px 22px;
-      margin-top: 10px;
-    }
-    .steps {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
-      gap: 16px;
-      counter-reset: step;
-    }
-    .step {
-      position: relative;
-      padding-left: 32px;
-    }
-    .step::before {
-      counter-increment: step;
-      content: counter(step);
-      position: absolute;
-      left: 0;
-      top: 2px;
-      width: 20px;
-      height: 20px;
-      border-radius: 999px;
-      background: var(--accent-soft);
-      color: #1d4ed8;
-      font-size: 11px;
+      background: #ffffff;
+      color: #111827;
       font-weight: 600;
+      font-size: 14px;
+      text-decoration: none;
+      box-shadow: 0 10px 25px rgba(15,23,42,0.25);
+      border: none;
+      cursor: pointer;
+    }
+
+    /* GENERIC SECTIONS */
+
+    section {
+      margin-bottom: 40px;
+    }
+
+    .section-inner {
+      background: var(--card);
+      border-radius: var(--radius-lg);
+      padding: 30px 26px 26px;
+      box-shadow: 0 10px 32px rgba(15, 23, 42, 0.08);
+      border: 1px solid var(--border-soft);
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 26px;
+      font-weight: 600;
+      margin-bottom: 24px;
+    }
+
+    /* SERVICES */
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+      gap: 22px;
+    }
+
+    .service-card {
+      text-align: center;
+      padding: 10px 8px 6px;
+    }
+
+    .service-icon {
+      width: 60px;
+      height: 60px;
+      border-radius: 20px;
+      margin: 0 auto 10px;
+      background: rgba(255,79,123,0.09);
       display: flex;
       align-items: center;
       justify-content: center;
+      color: var(--accent-pink);
+      font-size: 28px;
     }
-    .zones-grid .card h3 { font-size: 14px; }
-    .zones-grid ul {
-      margin-left: 18px;
-      font-size: 12px;
-      color: var(--muted);
-    }
-    .examples {
-      background: #f7f9fc;
-      border-radius: 24px;
-      border: 1px solid var(--border-soft);
-    }
-    .team-photo {
-      width: 100%;
-      border-radius: 14px;
-      margin-bottom: 8px;
-      object-fit: cover;
-      aspect-ratio: 4 / 3;
-    }
-    .team-grid .card { text-align: left; }
-    .tarifs {
-      background: #fafafa;
-      border-radius: 24px;
-      border: 1px solid var(--border-soft);
-    }
-    .tarif-price {
-      font-size: 22px;
+
+    .service-title {
       font-weight: 600;
       margin-bottom: 4px;
-      color: #1d4ed8;
+      font-size: 15px;
     }
-    .tarif-note {
-      font-size: 12px;
-      color: var(--muted);
-      margin-bottom: 8px;
-    }
-    .tarif-list {
-      margin-left: 16px;
+
+    .service-text {
       font-size: 13px;
       color: var(--muted);
     }
-    .tarif-list li { margin-bottom: 4px; }
-    .contact-block {
-      background: linear-gradient(135deg, #1f2937, #111827);
-      color: #e5e7eb;
-      border-radius: 24px;
-      padding: 24px 22px;
-      box-shadow: var(--shadow-soft);
+
+    /* WHY */
+
+    .why-grid {
       display: grid;
-      grid-template-columns: minmax(0,1.4fr) minmax(0,1.2fr);
-      gap: 20px;
+      grid-template-columns: repeat(4, minmax(0,1fr));
+      gap: 18px;
+    }
+
+    .why-card {
+      text-align: center;
+      padding: 10px 6px;
+    }
+
+    .why-icon {
+      width: 50px;
+      height: 50px;
+      border-radius: 16px;
+      margin: 0 auto 8px;
+      background: rgba(29,134,255,0.07);
+      display: flex;
       align-items: center;
+      justify-content: center;
+      color: var(--accent-blue);
+      font-size: 24px;
     }
-    .contact-block h2 {
-      color: #f9fafb;
+
+    .why-title {
+      font-weight: 600;
+      font-size: 14px;
+      margin-bottom: 2px;
+    }
+
+    .why-text {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    /* LISTINGS / BIENS GÉRÉS */
+
+    .listings-section .section-inner {
+      background: #fff8f1;
+    }
+
+    .listings-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0,1fr));
+      gap: 20px;
+    }
+
+    .listing-card {
+      background: #ffffff;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 12px 32px rgba(15,23,42,0.12);
+    }
+
+    .listing-top {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 2px;
+      height: 170px;
+      overflow: hidden;
+    }
+
+    .listing-main-photo {
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .listing-main-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .listing-side {
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+      gap: 2px;
+    }
+
+    .listing-side img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .listing-badge {
+      position: absolute;
+      top: 12px;
+      right: 14px;
+      padding: 5px 10px;
+      border-radius: 999px;
+      background: #fff4ea;
+      color: #c05621;
+      font-size: 11px;
+      font-weight: 600;
+      box-shadow: 0 8px 18px rgba(0,0,0,0.18);
+    }
+
+    .listing-body {
+      padding: 12px 14px 10px;
+      font-size: 13px;
+    }
+
+    .listing-title {
+      font-weight: 600;
+      font-size: 15px;
+      margin-bottom: 2px;
+    }
+
+    .listing-location {
+      font-size: 12px;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+
+    .listing-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      font-size: 11px;
+      color: var(--muted);
       margin-bottom: 8px;
     }
-    .contact-text {
-      font-size: 13px;
-      color: #cbd5f5;
-      margin-bottom: 12px;
+
+    .listing-meta span::after {
+      content: "•";
+      margin-left: 4px;
     }
-    .contact-infos {
-      font-size: 13px;
-      line-height: 1.5;
+    .listing-meta span:last-child::after {
+      content: "";
+      margin: 0;
     }
-    .contact-infos strong { font-size: 14px; }
-    .contact-form {
-      display: grid;
-      gap: 8px;
-      font-size: 12px;
-    }
-    .field { display: grid; gap: 4px; }
-    label {
+
+    .listing-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       font-size: 11px;
-      color: #cbd5f5;
+      border-top: 1px solid #f1f1f1;
+      padding-top: 8px;
+      margin-top: 4px;
     }
-    input, textarea {
+
+    .pill-icon {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .star {
+      color: #fbbf24;
+      font-size: 13px;
+    }
+
+    /* TEAM / À PROPOS */
+
+    .about-section .section-inner {
+      text-align: center;
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+      gap: 24px;
+      margin-top: 10px;
+    }
+
+    .team-card {
+      text-align: center;
+      font-size: 13px;
+    }
+
+    .team-photo {
+      width: 120px;
+      height: 120px;
       border-radius: 999px;
-      border: none;
-      padding: 8px 10px;
+      overflow: hidden;
+      margin: 0 auto 10px;
+      box-shadow: 0 12px 26px rgba(15,23,42,0.18);
+    }
+
+    .team-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .team-name {
+      font-weight: 600;
+      margin-bottom: 2px;
+    }
+
+    .team-role {
       font-size: 12px;
-      font-family: inherit;
-      outline: none;
+      color: var(--muted);
     }
-    textarea {
-      border-radius: 14px;
-      resize: vertical;
-      min-height: 70px;
-    }
-    .btn-light {
-      background: #f9fafb;
-      color: #111827;
-      box-shadow: 0 6px 16px rgba(15,23,42,0.4);
-    }
-    .btn-light:hover { background: #e5e7eb; }
+
+    /* FOOTER */
+
     footer {
-      margin-top: 26px;
-      padding: 30px 4px 10px;
+      margin-top: 18px;
       font-size: 11px;
       color: var(--muted);
       text-align: center;
     }
-    footer a { text-decoration: underline; }
-    @media (max-width: 880px) {
-      .topbar { border-radius: 16px; }
-      nav { display: none; }
-      .cta-top { display: none; }
-      header.hero {
+
+    @media (max-width: 960px) {
+      .services-grid {
+        grid-template-columns: repeat(2, minmax(0,1fr));
+      }
+      .why-grid {
+        grid-template-columns: repeat(2, minmax(0,1fr));
+      }
+      .listings-grid {
         grid-template-columns: minmax(0,1fr);
-        padding: 20px 16px;
       }
-      .hero-image {
-        min-height: 180px;
-        order: -1;
+    }
+
+    @media (max-width: 720px) {
+      header.hero {
+        height: 280px;
+        border-radius: 0 0 26px 26px;
       }
-      .section {
-        padding: 34px 4px;
+      .section-inner {
+        padding: 22px 18px 20px;
       }
-      .contact-block {
+      .team-grid {
         grid-template-columns: minmax(0,1fr);
       }
     }
@@ -416,314 +415,214 @@
 <body>
 
 <div class="page">
-  <div class="topbar">
-    <div class="brand">
-      <div class="brand-mark">S</div>
-      <div>
-        <div class="brand-text-title">Simpleo Conciergerie</div>
-        <div class="brand-text-sub">Val de Loire & Atlantique</div>
-      </div>
-    </div>
-    <nav>
-      <a href="#services">Services</a>
-      <a href="#zones">Zones</a>
-      <a href="#tarifs">Tarifs</a>
-      <a href="#equipe">Équipe</a>
-      <a href="#contact">Contact</a>
-    </nav>
-    <div class="cta-top">
-      <button class="btn btn-ghost" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
-        Être rappelé
-      </button>
-      <button class="btn btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
-        Estimer mon bien
-      </button>
-    </div>
-  </div>
 
+  <!-- HERO -->
   <header class="hero">
-    <div class="hero-copy">
-      <div class="hero-kicker">Conciergerie location saisonnière & meublés</div>
-      <h1>Une conciergerie <span>simple et exigeante</span> pour vos biens en Val de Loire & Atlantique.</h1>
-      <p class="hero-sub">
-        Simpleo Conciergerie accompagne les propriétaires de gîtes, maisons et appartements 
-        en location saisonnière ou meublée : gestion des voyageurs, ménage, maintenance et 
-        optimisation des revenus à Nantes, en Val de Loire et sur la côte Atlantique.
-      </p>
-      <div class="hero-badges">
-        <span class="badge">Propriétaires de gîtes nous-mêmes</span>
-        <span class="badge">Process digitaux, contact humain</span>
-        <span class="badge">Val de Loire • Nantes • Littoral 44</span>
-      </div>
-      <div class="hero-cta">
-        <button class="btn btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
-          Parler de mon bien
-        </button>
-        <button class="btn btn-ghost" onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'})">
-          Découvrir les services
-        </button>
-      </div>
-      <p class="hero-note">
-        Réponse sous 24–48h. Aucun engagement après ce premier échange.
-      </p>
-    </div>
-
-    <div class="hero-image">
-      <div class="hero-stats">
-        <div class="hero-stat-card">
-          <div class="hero-stat-value">Propriétaires accompagnés</div>
-          <div class="muted">Gîtes & meublés en Val de Loire et région nantaise.</div>
-        </div>
-        <div class="hero-stat-card">
-          <div class="hero-stat-value">Conciergerie familiale</div>
-          <div class="muted">Une équipe de 3 personnes, propriétaire-exploitants.</div>
-        </div>
-      </div>
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-logo">Simpleo</div>
+      <div class="hero-sub">CONCIERGERIE</div>
+      <a href="#contact" class="hero-cta">Demander un appel</a>
     </div>
   </header>
 
-  <main>
-    <section id="services" class="section services">
-      <h2>Nos services</h2>
-      <p class="section-sub">
-        Simpleo Conciergerie prend en charge la gestion du quotidien pour que vous puissiez 
-        louer sereinement, sans vous occuper des détails.
-      </p>
-      <div class="grid">
-        <div class="card">
-          <h3>🧳 Gestion voyageurs</h3>
-          <p class="muted">
-            Messages, filtrage des demandes, organisation des arrivées et départs, 
-            informations pratiques et assistance pendant le séjour.
-          </p>
-        </div>
-        <div class="card">
-          <h3>🧼 Ménage & linge</h3>
-          <p class="muted">
-            Ménage professionnel, contrôle qualité, gestion ou coordination du linge 
-            (en propre ou via nos partenaires).
-          </p>
-        </div>
-        <div class="card">
-          <h3>📊 Optimisation des revenus</h3>
-          <p class="muted">
-            Ajustement des tarifs selon la saison, les événements et la demande locale, 
-            avec un suivi régulier des performances.
-          </p>
-        </div>
-        <div class="card">
-          <h3>🛠️ Suivi & maintenance</h3>
-          <p class="muted">
-            Petites interventions, coordination d’artisans de confiance, remontée 
-            systématique des informations importantes.
-          </p>
-        </div>
-      </div>
-      <div class="how">
-        <div class="pill">Comment ça se passe concrètement ?</div>
-        <div class="steps">
-          <div class="step">
-            <strong>1. Premier échange</strong>
-            <p class="muted">
-              Vous nous présentez votre bien (ou projet) et vos objectifs. Nous analysons 
-              la zone, la typologie et le potentiel locatif.
-            </p>
+  <!-- NOS SERVICES -->
+  <section id="services">
+    <div class="section-inner">
+      <h2 class="section-title">Nos services</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">🏡</div>
+          <div class="service-title">Gestion de location</div>
+          <div class="service-text">
+            Prise en charge complète de vos réservations, messages et arrivées.
           </div>
-          <div class="step">
-            <strong>2. Proposition claire</strong>
-            <p class="muted">
-              Vous recevez une proposition de gestion avec ce que nous faisons pour vous, 
-              le modèle de rémunération et le prévisionnel estimatif.
-            </p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🛡️</div>
+          <div class="service-title">Suivi de propriétaire</div>
+          <div class="service-text">
+            Comptes rendus réguliers, suivi des revenus, gestion des interventions.
           </div>
-          <div class="step">
-            <strong>3. Mise en place</strong>
-            <p class="muted">
-              Création ou reprise d’annonces, mise en place des process, briefing ménage 
-              et suivi. Vous conservez une vision claire sur vos performances.
-            </p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🤝</div>
+          <div class="service-title">Relation voyageurs</div>
+          <div class="service-text">
+            Accueil chaleureux, réponses rapides et accompagnement pendant le séjour.
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="zones" class="section">
-      <h2>Zones d’intervention</h2>
-      <p class="section-sub">
-        Nous intervenons sur des zones que nous connaissons en tant que professionnels et 
-        habitants : un atout pour vos voyageurs comme pour vos revenus.
-      </p>
-      <div class="grid zones-grid">
-        <div class="card">
-          <h3>Val de Loire</h3>
-          <ul>
-            <li>Chenonceaux, Civray-de-Touraine, Bléré, Amboise…</li>
-            <li>Gîtes et maisons de famille proches des châteaux.</li>
-          </ul>
+  <!-- POURQUOI NOUS CHOISIR -->
+  <section>
+    <div class="section-inner">
+      <h2 class="section-title">Pourquoi nous choisir</h2>
+      <div class="why-grid">
+        <div class="why-card">
+          <div class="why-icon">📍</div>
+          <div class="why-title">Expertise locale</div>
+          <div class="why-text">
+            Une connaissance fine du marché local et des attentes des voyageurs.
+          </div>
         </div>
-        <div class="card">
-          <h3>Région nantaise</h3>
-          <ul>
-            <li>Nantes et métropole, vignoble & bords de Loire.</li>
-            <li>Locations meublées courte & moyenne durée.</li>
-          </ul>
+        <div class="why-card">
+          <div class="why-icon">📋</div>
+          <div class="why-title">Service tout compris</div>
+          <div class="why-text">
+            Une offre claire, du ménage à la gestion des annonces.
+          </div>
         </div>
-        <div class="card">
-          <h3>Côte Atlantique (sur étude)</h3>
-          <ul>
-            <li>Pornic, La Baule et littoral 44 selon le projet.</li>
-            <li>Étude personnalisée en fonction du bien.</li>
-          </ul>
+        <div class="why-card">
+          <div class="why-icon">⭐</div>
+          <div class="why-title">Qualité professionnelle</div>
+          <div class="why-text">
+            Des prestations soignées, avec le souci du détail.
+          </div>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">👍</div>
+          <div class="why-title">Satisfaction garantie</div>
+          <div class="why-text">
+            Des propriétaires sereins et des voyageurs enchantés.
+          </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="section examples">
-      <h2>Exemples de biens que nous gérons</h2>
-      <p class="section-sub">
-        Voici deux exemples de logements actuellement gérés par Simpleo Conciergerie.
-      </p>
-      <div class="grid">
-        <div class="card">
-          <img src="assets/les-rives-de-chenonceaux.jpg" alt="Gîte Les Rives de Chenonceaux" class="team-photo">
-          <h3>Les Rives de Chenonceaux</h3>
-          <p class="muted">
-            Maison en bord de Cher exploitée en location saisonnière, 
-            pensée pour les séjours en famille à proximité des châteaux.
-          </p>
-        </div>
-        <div class="card">
-          <img src="assets/le-chant-des-etoiles.jpg" alt="Le Chant des Étoiles" class="team-photo">
-          <h3>Le Chant des Étoiles</h3>
-          <p class="muted">
-            Logement chaleureux géré par notre conciergerie, avec un 
-            soin particulier porté à l’accueil et à la propreté.
-          </p>
-        </div>
-      </div>
-    </section>
+  <!-- BIENS GÉRÉS -->
+  <section class="listings-section">
+    <div class="section-inner">
+      <h2 class="section-title">Biens gérés</h2>
+      <div class="listings-grid">
 
-    <section id="tarifs" class="section tarifs">
-      <h2>Tarifs simples & transparents</h2>
-      <p class="section-sub">
-        Nous privilégions un modèle aligné sur vos intérêts : si votre bien ne loue pas, 
-        nous ne gagnons rien. Les détails sont affinés ensemble selon votre situation.
-      </p>
-      <div class="grid">
-        <div class="card">
-          <h3>Gestion complète</h3>
-          <div class="tarif-price">~20&nbsp;%</div>
-          <div class="tarif-note">des revenus locatifs encaissés</div>
-          <ul class="tarif-list">
-            <li>Gestion des annonces & calendrier.</li>
-            <li>Relation voyageurs avant / pendant / après.</li>
-            <li>Coordination ménage & linge.</li>
-            <li>Suivi et optimisation des prix.</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h3>Formule ajustée</h3>
-          <div class="tarif-price">à partir de 12–15&nbsp;%</div>
-          <div class="tarif-note">si vous gardez une partie de la gestion</div>
-          <ul class="tarif-list">
-            <li>Idéal si vous gérez vous-même le ménage ou le check-in.</li>
-            <li>Adapté aux propriétaires souhaitant une montée en puissance progressive.</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h3>Options sur-mesure</h3>
-          <div class="tarif-note">
-            Linge, visites techniques, états des lieux, suivi de travaux…
+        <!-- Les Rives de Chenonceaux -->
+        <article class="listing-card">
+          <div style="position:relative;">
+            <div class="listing-top">
+              <div class="listing-main-photo">
+                <img src="assets/les-rives-de-chenonceaux.jpg" alt="Les Rives de Chenonceaux">
+              </div>
+              <div class="listing-side">
+                <img src="assets/les-rives-de-chenonceaux.jpg" alt="">
+                <img src="assets/les-rives-de-chenonceaux.jpg" alt="">
+              </div>
+            </div>
+            <div class="listing-badge">Réserver</div>
           </div>
-          <ul class="tarif-list">
-            <li>Facturation au forfait ou à la mission.</li>
-            <li>Transparence sur les coûts et les intervenants.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
+          <div class="listing-body">
+            <div class="listing-title">Les Rives de Chenonceaux</div>
+            <div class="listing-location">
+              Logement entier · Civray-de-Touraine, France
+            </div>
+            <div class="listing-meta">
+              <span>10 voyageurs</span>
+              <span>4 chambres</span>
+              <span>8 lits</span>
+              <span>2 salles de bain</span>
+            </div>
+            <div class="listing-footer">
+              <div class="pill-icon">
+                <span>💖</span>
+                <span>Coup de cœur voyageurs</span>
+              </div>
+              <div>
+                <span class="star">★</span>
+                <strong>4,96</strong> · 49 commentaires
+              </div>
+            </div>
+          </div>
+        </article>
 
-    <section id="equipe" class="section">
-      <h2>Une conciergerie familiale, proche des propriétaires</h2>
-      <p class="section-sub">
-        Simpleo Conciergerie est portée par trois personnes : une équipe familiale qui 
-        gère déjà ses propres gîtes et meublés. Vous savez qui s’occupe de votre bien.
-      </p>
-      <div class="grid team-grid">
-        <div class="card">
-          <img src="assets/team-toi.jpg" alt="Co-gérant Simpleo Conciergerie" class="team-photo">
-          <h3>Ton prénom</h3>
-          <p class="muted">
-            Co-gérant & optimisation. Automatisation, organisation, suivi 
-            des performances et stratégie de revenus.
-          </p>
-        </div>
-        <div class="card">
-          <img src="assets/team-frere.jpg" alt="Co-gérant terrain" class="team-photo">
-          <h3>Prénom frère</h3>
-          <p class="muted">
-            Co-gérant & terrain. Relation voyageurs, coordination des 
-            interventions, contrôle qualité des logements.
-          </p>
-        </div>
-        <div class="card">
-          <img src="assets/team-femme.jpg" alt="Gestionnaire de biens" class="team-photo">
-          <h3>Prénom épouse</h3>
-          <p class="muted">
-            Gestionnaire de biens. Suivi quotidien, communication, 
-            planification des séjours et du ménage.
-          </p>
-        </div>
-      </div>
-    </section>
+        <!-- Le Chant des Étoiles -->
+        <article class="listing-card">
+          <div style="position:relative;">
+            <div class="listing-top">
+              <div class="listing-main-photo">
+                <img src="assets/le-chant-des-etoiles.jpg" alt="Le Chant des Étoiles">
+              </div>
+              <div class="listing-side">
+                <img src="assets/le-chant-des-etoiles.jpg" alt="">
+                <img src="assets/le-chant-des-etoiles.jpg" alt="">
+              </div>
+            </div>
+            <div class="listing-badge">Réserver</div>
+          </div>
+          <div class="listing-body">
+            <div class="listing-title">Le Chant des Étoiles</div>
+            <div class="listing-location">
+              Logement entier · La Croix-en-Touraine, France
+            </div>
+            <div class="listing-meta">
+              <span>9 voyageurs</span>
+              <span>4 chambres</span>
+              <span>7 lits</span>
+              <span>2,5 salles de bain</span>
+            </div>
+            <div class="listing-footer">
+              <div class="pill-icon">
+                <span>💖</span>
+                <span>Coup de cœur voyageurs</span>
+              </div>
+              <div>
+                <span class="star">★</span>
+                <strong>4,86</strong> · 22 commentaires
+              </div>
+            </div>
+          </div>
+        </article>
 
-    <section id="contact" class="section">
-      <div class="contact-block">
-        <div>
-          <h2>Parlons de votre bien</h2>
-          <p class="contact-text">
-            Quelques informations suffisent pour un premier avis sur votre bien ou votre projet. 
-            Nous revenons vers vous sous 24–48h pour un échange téléphonique ou visio.
-          </p>
-          <div class="contact-infos">
-            <p><strong>📞 Téléphone :</strong> à compléter</p>
-            <p><strong>📧 Email :</strong> a.completer@simpleoconciergerie.fr</p>
-            <p class="muted" style="margin-top:8px;">
-              Vous pouvez aussi nous envoyer directement les liens de vos annonces existantes 
-              (Airbnb, Booking, autres) si votre bien est déjà en ligne.
-            </p>
-          </div>
-        </div>
-        <form class="contact-form">
-          <div class="field">
-            <label for="nom">Nom & prénom</label>
-            <input id="nom" type="text" placeholder="Votre nom">
-          </div>
-          <div class="field">
-            <label for="email">Email</label>
-            <input id="email" type="email" placeholder="vous@exemple.com">
-          </div>
-          <div class="field">
-            <label for="zone">Localisation du bien</label>
-            <input id="zone" type="text" placeholder="Ex. : Chenonceaux, Nantes, côte Atlantique…">
-          </div>
-          <div class="field">
-            <label for="message">Votre projet en quelques lignes</label>
-            <textarea id="message" placeholder="Type de bien, nombre de chambres, projet (déjà en location, à créer, travaux prévus…)"></textarea>
-          </div>
-          <button type="button" class="btn btn-light">
-            Envoyer ma demande
-          </button>
-          <p class="muted" style="font-size:11px; margin-top:6px;">
-            À connecter ensuite à Jotform / Zapier / Beds24 pour automatiser la prise de contact.
-          </p>
-        </form>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
+
+  <!-- À PROPOS / ÉQUIPE -->
+  <section id="contact" class="about-section">
+    <div class="section-inner">
+      <h2 class="section-title">À propos</h2>
+      <p style="text-align:center; max-width:640px; margin:0 auto 16px; font-size:14px; color:var(--muted);">
+        Simpleo Conciergerie est une conciergerie familiale qui gère ses propres gîtes
+        et ceux de propriétaires qui nous font confiance en Val de Loire et en région nantaise.
+      </p>
+
+      <div class="team-grid">
+        <div class="team-card">
+          <div class="team-photo">
+            <img src="assets/team-sophie.jpg" alt="Sophie">
+          </div>
+          <div class="team-name">Sophie</div>
+          <div class="team-role">Gestion des biens & relation propriétaires</div>
+        </div>
+        <div class="team-card">
+          <div class="team-photo">
+            <img src="assets/team-seb.jpg" alt="Sébastien">
+          </div>
+          <div class="team-name">Sébastien</div>
+          <div class="team-role">Terrain, accueil voyageurs & qualité</div>
+        </div>
+        <div class="team-card">
+          <div class="team-photo">
+            <img src="assets/team-greg.jpg" alt="Grégory">
+          </div>
+          <div class="team-name">Grégory</div>
+          <div class="team-role">Optimisation, automatisation & stratégie</div>
+        </div>
+      </div>
+
+      <p style="margin-top:22px; font-size:13px; color:var(--muted);">
+        Vous avez un projet ou un bien déjà en location&nbsp;? Écrivez-nous à
+        <strong>contact@simpleoconciergerie.fr</strong> ou ajoutez simplement le lien de votre annonce Airbnb
+        pour un premier échange sans engagement.
+      </p>
+    </div>
+  </section>
 
   <footer>
-    © <span id="year"></span> Simpleo Conciergerie – Val de Loire & Atlantique • Conciergerie locations saisonnières & meublés
+    © <span id="year"></span> Simpleo Conciergerie – Conciergerie Val de Loire & Atlantique
   </footer>
 </div>
 
