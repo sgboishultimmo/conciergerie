@@ -13,7 +13,9 @@
       --bg: #fdf7f0;
       --card: #ffffff;
       --accent-pink: #ff4f7b;
+      --accent-pink-soft: #ffe3ec;
       --accent-blue: #1d86ff;
+      --accent-blue-soft: #e2efff;
       --text: #1f2933;
       --muted: #6b7280;
       --radius-lg: 20px;
@@ -59,10 +61,10 @@
     .hero-bg {
       position: absolute;
       inset: 0;
-      background-image: url("assets/hero-salon.jpg");
+      background-image: url("assets/hero-conciergerie.jpg");
       background-size: cover;
       background-position: center;
-      filter: brightness(0.85);
+      filter: brightness(0.9);
       transform: scale(1.02);
     }
 
@@ -71,8 +73,8 @@
       inset: 0;
       background: linear-gradient(
         180deg,
-        rgba(0,0,0,0.15) 0%,
-        rgba(0,0,0,0.35) 80%
+        rgba(0,0,0,0.18) 0%,
+        rgba(0,0,0,0.42) 80%
       );
     }
 
@@ -120,6 +122,11 @@
       cursor: pointer;
     }
 
+    .hero-cta:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 14px 30px rgba(15,23,42,0.32);
+    }
+
     /* GENERIC SECTIONS */
 
     section {
@@ -141,6 +148,42 @@
       margin-bottom: 24px;
     }
 
+    /* ICONS – shared base */
+
+    .icon-wrapper {
+      width: 64px;
+      height: 64px;
+      border-radius: 22px;
+      margin: 0 auto 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 10px 24px rgba(15,23,42,0.16);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .icon-inner {
+      position: relative;
+      z-index: 1;
+      font-size: 30px;
+    }
+
+    .icon-wrapper::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      opacity: 0.85;
+    }
+
+    .icon-pink::before {
+      background: radial-gradient(circle at 20% 20%, #ffffff 0, #ffe6f0 40%, #ff4f7b 120%);
+    }
+
+    .icon-blue::before {
+      background: radial-gradient(circle at 20% 20%, #ffffff 0, #e4f0ff 40%, #1d86ff 120%);
+    }
+
     /* SERVICES */
 
     .services-grid {
@@ -152,19 +195,6 @@
     .service-card {
       text-align: center;
       padding: 10px 8px 6px;
-    }
-
-    .service-icon {
-      width: 60px;
-      height: 60px;
-      border-radius: 20px;
-      margin: 0 auto 10px;
-      background: rgba(255,79,123,0.09);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--accent-pink);
-      font-size: 28px;
     }
 
     .service-title {
@@ -189,19 +219,6 @@
     .why-card {
       text-align: center;
       padding: 10px 6px;
-    }
-
-    .why-icon {
-      width: 50px;
-      height: 50px;
-      border-radius: 16px;
-      margin: 0 auto 8px;
-      background: rgba(29,134,255,0.07);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--accent-blue);
-      font-size: 24px;
     }
 
     .why-title {
@@ -433,21 +450,27 @@
       <h2 class="section-title">Nos services</h2>
       <div class="services-grid">
         <div class="service-card">
-          <div class="service-icon">🏡</div>
+          <div class="icon-wrapper icon-pink">
+            <span class="icon-inner">🏡</span>
+          </div>
           <div class="service-title">Gestion de location</div>
           <div class="service-text">
             Prise en charge complète de vos réservations, messages et arrivées.
           </div>
         </div>
         <div class="service-card">
-          <div class="service-icon">🛡️</div>
+          <div class="icon-wrapper icon-pink">
+            <span class="icon-inner">🛡️</span>
+          </div>
           <div class="service-title">Suivi de propriétaire</div>
           <div class="service-text">
-            Comptes rendus réguliers, suivi des revenus, gestion des interventions.
+            Comptes rendus réguliers, suivi des revenus et des interventions.
           </div>
         </div>
         <div class="service-card">
-          <div class="service-icon">🤝</div>
+          <div class="icon-wrapper icon-pink">
+            <span class="icon-inner">🤝</span>
+          </div>
           <div class="service-title">Relation voyageurs</div>
           <div class="service-text">
             Accueil chaleureux, réponses rapides et accompagnement pendant le séjour.
@@ -463,28 +486,36 @@
       <h2 class="section-title">Pourquoi nous choisir</h2>
       <div class="why-grid">
         <div class="why-card">
-          <div class="why-icon">📍</div>
+          <div class="icon-wrapper icon-blue">
+            <span class="icon-inner">📍</span>
+          </div>
           <div class="why-title">Expertise locale</div>
           <div class="why-text">
             Une connaissance fine du marché local et des attentes des voyageurs.
           </div>
         </div>
         <div class="why-card">
-          <div class="why-icon">📋</div>
+          <div class="icon-wrapper icon-blue">
+            <span class="icon-inner">📋</span>
+          </div>
           <div class="why-title">Service tout compris</div>
           <div class="why-text">
             Une offre claire, du ménage à la gestion des annonces.
           </div>
         </div>
         <div class="why-card">
-          <div class="why-icon">⭐</div>
+          <div class="icon-wrapper icon-blue">
+            <span class="icon-inner">⭐</span>
+          </div>
           <div class="why-title">Qualité professionnelle</div>
           <div class="why-text">
             Des prestations soignées, avec le souci du détail.
           </div>
         </div>
         <div class="why-card">
-          <div class="why-icon">👍</div>
+          <div class="icon-wrapper icon-blue">
+            <span class="icon-inner">👍</span>
+          </div>
           <div class="why-title">Satisfaction garantie</div>
           <div class="why-text">
             Des propriétaires sereins et des voyageurs enchantés.
@@ -580,7 +611,7 @@
     </div>
   </section>
 
-  <!-- À PROPOS / ÉQUIPE -->
+  <!-- À PROPOS / ÉQUIPE & CONTACT -->
   <section id="contact" class="about-section">
     <div class="section-inner">
       <h2 class="section-title">À propos</h2>
